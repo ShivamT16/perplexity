@@ -1,0 +1,38 @@
+.sb-heading{
+    font-family: "Signika Negative", sans-serif;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 0rem 1rem;
+}
+.sb-heading:hover{
+    color: #48BCD1
+}
+
+.sidenav{
+    /* border: 1px solid red; */
+    padding: 1.2rem 0rem;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0rem 4px;
+
+}
+
+.navv{
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    color: grey;
+    cursor: pointer;    
+    padding: .6rem 1rem;
+    border-radius: .4rem;
+    text-decoration: none;
+}
+.navv:hover{
+  color: rgb(16, 12, 59);
+  background-color: rgb(235, 230, 230);
+}
