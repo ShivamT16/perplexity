@@ -1,17 +1,19 @@
-import { useState } from "react";
-import { Categories } from "./data";
+import { useContext, useState } from "react";
+import { Categories } from "../Context/data";
 import { FaGlobeAmericas } from "react-icons/fa";
 import { ArticleCard } from "./Article";
+import { LoginContext } from "../Context/LoginContext";
 
 export const Discover = () => {
+  const {handleOpen} = useContext(LoginContext)
   const [ column, setColumn] = useState("Top")
 
   return (
-    <div className="bg-white px-10 my-2 rounded-xl ml-[15rem]" >
+    <div className="ml-0 md:ml-[14rem] bg-white px-6 w-max my-2 rounded-xl" >
       <h1 className="flex items-center text-3xl font-roboto gap-2 my-4 text-slate-750"><FaGlobeAmericas/> Discover</h1>
-      <p className="border mx-[-2.5rem]"></p>
-      <div className="flex w-[64rem]" > 
-       <div className="w-[80%] mr-10">
+      <p className="border mx-[-1.5rem]"></p>
+      <div className="w-[67rem] flex flex-wrap" > 
+       <div className="w-[70%] mr-6">
         <div className="flex gap-4 my-2">
             {
              Categories.map((item) =>
@@ -29,21 +31,21 @@ export const Discover = () => {
         <ArticleCard column={column} />
        </div>
 
-       <div className="flex items-start text-slate-600 w-[24rem] font-roboto bg-slate-100 p-4 h-max rounded-lg mt-16">
-        <div>
+       <div className="hidden md:block text-slate-600 w-[18rem] font-roboto bg-slate-100 p-4 h-max rounded-lg mt-16">
+        <div className="flex justify-between items-center">
         <p className="font-semibold text-lg">Make it yours</p>
+        <p>X</p>
+        </div>
         <p>Select topics and interests to customize your Discover experience</p>
         {
              Categories.slice(1).map((item) =>   
-             <button className="text-[#1a5050] bg-[#cde7e7] px-2.5 py-1.5 rounded-lg m-1">
+             <button onClick={handleOpen} className="text-[#1a5050] bg-[#cde7e7] px-2.5 py-1.5 rounded-lg m-1">
               <p className="flex gap-1 items-center">{item.icon}{item.category} </p>
               </button> 
         )}
-        <br />
-        <button>Save Interests</button>
+        <p className="border mx-[-1rem] mt-2"></p>
+        <button onClick={handleOpen} className="bg-[#258585] p-2 my-2 w-full rounded-3xl text-white font-semibold font-roboto hover:bg-[#469c9c]" >Save Interests</button>
         </div>
-        <p>X</p>
-       </div>
          
       </div>
 

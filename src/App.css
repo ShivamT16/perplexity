@@ -1,46 +1,42 @@
 .App{
   display: flex;
-  /* color: gray; */
-  /* margin: 0rem; */
-  /* background-color: grey; */
+  flex-wrap: wrap;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 1rem; /* Space between items */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
 .grid-item {
-  background-color: #f0f0f0; /* Light gray background */
-  border: 1px solid lightgray; /* Light border */
-  border-radius: 1rem; /* Rounded corners */
+  background-color: #f0f0f0;
+  border: 1px solid rgb(225, 230, 235); 
+  border-radius: 1rem;
 }
 
 .full-width {
-  grid-column: 1 / -1; /* Makes the first article span all columns */
+  grid-column: 1 / -1; 
 }
 
 .heading{
-  font-size: 1.2rem;
-  display: -webkit-box;          /* Use flexbox for the text */
-    -webkit-box-orient: vertical; /* Set the orientation */
-    -webkit-line-clamp: 2;        /* Number of lines to show */
-    overflow: hidden;              /* Hide the overflowing content */
-    text-overflow: ellipsis;      /* Add ellipsis (...) */
-    /* max-height: 4.5em;            /* Set max height based on line height */
-    /* line-height: 1.5em;  */
+  font-size: 1rem;
+  color: rgb(71 85 105);
+  display: -webkit-box;          
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 2;      
+  overflow: hidden;             
+  text-overflow: ellipsis;      
 }
 
 .button{
-  /* background-color: #1a5050; */
   background-color: #258585;
   border: none;
   padding: 1rem;
   color: white;
   font-size: 1rem;
   font-weight: 600;
-  margin: 0rem .6rem;
+  margin: 0.2rem .6rem;
   padding: .6rem 4.4rem;
   border-radius: 2rem;
 }
